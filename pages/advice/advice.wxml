@@ -1,0 +1,9 @@
+<!--pages/advice/advice.wxml-->
+<view>
+  <view>
+      <textarea placeholder='有什么吩咐呢' value="{{inputContent}}" style="height:600rpx;width: 100%" auto-focus="true" bindinput='inputTextarea'></textarea>
+    </view>
+  <view>
+   <button type="primary" bindtap="saveAdvice">提交</button>
+  </view>
+</view>

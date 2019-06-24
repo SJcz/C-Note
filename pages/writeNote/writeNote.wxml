@@ -1,0 +1,37 @@
+<!--pages/writeNote/writeNote.wxml-->
+<view>
+  <view class="top-view">
+    <view>{{currentDate}}</view>
+    <view>{{location}} {{whether}}</view>
+  </view>
+  <view style="background-color: {{backgroundColor}};color: {{fontColor}}">
+    <view>
+      <textarea placeholder='记录你的生活吧' value="{{inputContent}}" style="height:600rpx;width: 100%" auto-focus="true" bindinput='inputTextarea' disabled="{{!isTodayNote}}"></textarea>
+    </view>
+  </view>
+  <view class="image-list-view" wx:if="{{isTodayNote}}">
+      <image class="image-item" wx:if="{{currentNote == null}}" 
+      wx:for="{{choosedImageList}}" wx:for-item="path" src="{{path}}" 
+      mode="aspectFill"></image>
+      <image class="big-image-item" wx:if="{{currentNote != null}}" 
+      wx:for="{{currentNote.fileList}}" wx:for-item="file" 
+      src="{{file.url}}"  mode="aspectFill"></image>
+
+
+    <view wx:if="{{currentNote == null}}">
+      <view class="add-image-icon" bindtap="chooseImage" 
+      hidden="{{choosedImageList.length >= maxUploadImageCount}}"></view>
+    </view>
+  </view>
+  <view class="image-list-view" wx:else>
+    <image class="image-item" wx:for="{{currentNote.fileList}}" wx:for-item="file" 
+    src="{{file.url}}" mode="aspectFill"></image>
+  </view>
+  <view class="note-style-view">
+    <view class="note-style-{{index}} {{styleIndex == index ? 'selected' : ''}}" bindtap="changeNoteStyle" wx:for="{{styleIndexArr}}" wx:for-index="index" data-index="{{index}}"></view>
+  </view>
+  <view class="icon-view" hidden="{{!isTodayNote}}">
+    <icon type="success" size="40" style="margin: 60rpx" bindtap="saveNote" />
+    <icon type="clear" size="40" bindtap="clearContent" />
+  </view>
+</view>

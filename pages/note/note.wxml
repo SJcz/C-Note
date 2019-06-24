@@ -1,0 +1,20 @@
+<!--note.wxml-->
+<view>
+  <view wx:for="{{noteList}}" wx:for-index="index" wx:for-item="item" class="note-item" >
+    <view class="date-view">
+      <view>{{item.dayWeek}}</view>
+      <view>{{item.yearMonth}}</view>
+      <view class="circle-icon"></view>
+    </view>
+    <view class="content-container">
+      <view class="content-view" bindtap="viewNote" data-noteid="{{item.objectId}}">
+        <view class='jianjian'></view>
+        <view>{{item.content}}</view>
+        <view class="content-date-location-view">
+         {{item.hourMinSec + " " + (item.location ? item.location : '') + " " + (item.whether ? item.whether : '')}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <image src="{{writeNoteIconSrc}}" class="fixed-icon" bindtap="navigateToWritePage"></image>
+</view>

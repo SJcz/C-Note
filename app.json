@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/note/note",
+    "pages/my/my",
+    "pages/writeNote/writeNote",
+    "pages/advice/advice",
+    "pages/updateLog/updateLog"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0088CC",
+    "navigationBarTitleText": "C日记",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#111",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/note/note",
+        "selectedIconPath": "assets/riji-selected.png",
+        "iconPath": "assets/riji.png",
+        "text": "日记"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "assets/wode-selected.png",
+        "iconPath": "assets/wode.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

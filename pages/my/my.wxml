@@ -1,0 +1,40 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view class="top-view" >
+    <view class="user-info-view" >
+        <image src="{{avatarUrl}}" mode="aspectFill"></image>
+        <view>{{nickName}}</view>
+    </view>
+    <view class="note-info-view">
+      <view class="note-info-item">
+        <view>{{totalPhoto}}张</view>
+        <view>总照片</view>
+      </view>
+      <view class="split-view note-info-item">
+        <view>{{totalDays}}天</view>
+        <view>累计天数</view>
+      </view>
+      <view class="note-info-item">
+        <view>{{totalSize}}字</view>
+        <view>总字数</view>
+      </view>
+    </view>
+  </view>
+  <view class="operation-list-view">
+    <view class="operation-list-item" bindtap="switchToAdvicePage">
+      <image src="{{adviceIcon}}" mode="aspectFill"></image>
+      <view class="middle-font">建议反馈</view>
+      <image src="{{dayuhaoIcon}}" ></image>
+    </view>
+    <view class="operation-list-item" bindtap="switchToUpdateLogPage">
+      <image src="{{updateLogIcon}}" mode="aspectFill"></image>
+      <view class="middle-font">更新日志</view>
+      <image src="{{dayuhaoIcon}}" ></image>
+    </view>
+    <view class="operation-list-item" bindtap="showProjectIntroduction">
+      <image src="{{guanyuIcon}}" mode="aspectFill"></image>
+      <view class="middle-font">关于C日记</view>
+      <image src="{{dayuhaoIcon}}" ></image>
+    </view>
+  </view>
+</view>

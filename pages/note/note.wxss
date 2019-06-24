@@ -1,0 +1,72 @@
+/**note.wxss**/
+page{
+  background-color: #f5f5f5;
+  font-size: 28rpx;
+}
+
+.note-item {
+  /*border-bottom: 1px solid rgb(145, 136, 136);*/
+  display: flex;
+  flex-direction: row;
+}
+
+.date-view {
+  text-align: center;
+  margin-right: 30rpx;
+  border-right: 1px solid rgb(99, 92, 92);
+  padding: 25rpx;
+  position: relative
+}
+
+.circle-icon{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 14rpx;
+  border: 1px solid rgb(99, 92, 92);
+  position: absolute;
+  top: 45rpx;
+  right: -14rpx;
+  background-color: #eee;
+}
+
+.fixed-icon {
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+
+.content-container {
+  width: 100%;
+  padding: 25rpx;
+}
+.content-view{
+  background-color: #fff;
+  position: relative;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.content-date-location-view {
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: rgb(104, 100, 100);
+}
+
+.content-view .jianjian {
+    position:absolute;
+    top:20rpx;
+    left:-30rpx; /* 圆角的位置需要细心调试哦 */
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px;
+    border-color:#f5f5f5 #fff #f5f5f5 #f5f5f5;
+}
+
+.write-note-tip {
+  text-align: center;
+  color: rgb(80, 74, 74);
+  padding: 20rpx;
+}
