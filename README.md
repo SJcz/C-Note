@@ -6,11 +6,11 @@
 
 
 #### 日记详细页面
-<image src="/picture/QQ图片201906242035046.png" width="250"/>
+<image src="/picture/QQ图片20190624203504.png" width="250"/>
 
 
 #### 当天日记详细页面(可修改)
-<image src="/picture/QQ图片20190624203450.png" width="250"/>
+<image src="/picture/QQ图片20190624203450.jpg" width="250"/>
 
 
 #### 我的 
